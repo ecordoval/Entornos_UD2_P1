@@ -11,6 +11,7 @@ public class App {
             System.out.println("Choose an option:\n" +
                     "  1. Square\n" +
                     "  2. Title\n" +
+                    "  3. Square con caracter\n" +
                     "  0. Quit\n");
 
             int numero = teclado.nextInt();
@@ -26,6 +27,13 @@ public class App {
                 Titles.writeTitle(titulo);
             } else if (numero == 0) {
                 Console.close();
+            } else if (numero == 3)
+            {
+                System.out.printf("Lado del cuadrado: ");
+                int lado = teclado.nextInt();
+                System.out.printf("Caracter: ");
+                char caracter = teclado.next().charAt(0);
+                Figures.writeSquare(lado,caracter);
             }
         }
     }
